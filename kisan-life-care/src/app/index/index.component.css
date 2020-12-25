@@ -1,0 +1,68 @@
+
+.shadoww{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.footer{
+    background-color: black;
+}
+
+
+.wrapper {
+    margin-top: 50px;
+}
+.style {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.box {
+    width: 80%;
+    display: inline-block;
+    margin: 0 10%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 100px;
+}
+
+.ubuntu {
+    font-family: 'Ubuntu';
+    font-weight: bolder;
+}
+
+.hind {
+    font-family: 'Hind';
+    font-weight: bolder;
+}
+
+.tableDesign {
+    border-radius: 25px;
+}
+
+.sign {
+    font-family: 'Yellowtail';
+    font-size: 35px;
+    padding-left: 20px;
+    border-radius: 50px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .heading{
+        font-size: 35px;
+        text-align: center;
+        font-weight: bolder;
+        margin: 25px;
+    }
+
+    .subheading {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        margin: 25px;
+    }
+
+
+}
