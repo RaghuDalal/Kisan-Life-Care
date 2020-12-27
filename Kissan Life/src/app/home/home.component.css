@@ -1,0 +1,88 @@
+.disclaimer {
+    padding: 100px;
+    width: 100%;
+}
+.disclaimer p {
+ width: 100% !important;
+ overflow: hidden;
+ font-size: 25px;
+ line-height: 1.5;
+    font-weight: 500;
+    color: black;
+    text-align: justify;
+}
+.content_box {
+    width: 100%;
+}
+.display_title {
+    text-align: center !important;
+}
+.display_title h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+.message {
+    font-family: 'Hind';
+    font-weight: bolder;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.ubuntu {
+    font-family: 'Ubuntu';
+    font-weight: bolder;
+}
+
+.hind {
+    font-family: 'Hind';
+    font-weight: bolder;
+}
+
+.tableDesign {
+    border-radius: 25px;
+}
+
+.butn {
+    font-family: 'Hind';
+    font-size: 25px;
+    font-weight: bolder;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+@media screen and (max-width: 768px) {
+
+    .heading{
+        font-size: 35px;
+        text-align: center;
+        font-weight: bolder;
+        margin: 25px;
+    }
+
+    .subheading {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        margin: 25px;
+    }
+
+
+}
+@media only screen and (max-width: 600px)
+{
+   .disclaimer {
+       padding: 40px;
+       
+   } 
+   .display_title h1 {
+      margin-top: 50px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.disclaimer p {
+    font-size: 18px;
+    line-height: 1.5;
+       font-weight: 500;
+       color: black;
+       text-align: justify;
+   }
+}

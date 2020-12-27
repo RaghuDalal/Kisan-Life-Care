@@ -1,0 +1,16 @@
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #00042d;
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+}
+.footer .para{
+  padding: 20px;
+}
+a{
+  text-decoration: none;
+}

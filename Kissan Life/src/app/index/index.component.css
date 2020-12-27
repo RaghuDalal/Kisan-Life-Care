@@ -1,0 +1,67 @@
+.form-box {
+  padding: 60px;
+}
+.form_box {
+  background-color: aliceblue;
+  padding: 20px;
+}
+.label {
+  width: 100% !important;
+}
+form {
+  max-width: 100%;
+  width: 100%;
+ }
+ 
+ .form_box h1 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 30px !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+-webkit-appearance: none;
+}
+
+ @media only screen and (max-width: 600px)
+ {
+  .form-box {
+    padding: 5px;
+  }
+  .form_box {
+    background-color: aliceblue;
+    padding: 5px;
+  }
+  .form_box h1 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 80px !important;
+}
+ }
+.message {
+  font-family: 'Hind';
+  font-weight: bolder;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.ubuntu {
+  font-family: 'Ubuntu';
+  font-weight: bolder;
+}
+
+.hind {
+  font-family: 'Hind';
+  font-weight: bolder;
+}
+
+.butn {
+  font-family: 'Hind';
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #010638;
+}
+

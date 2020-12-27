@@ -1,0 +1,260 @@
+<section><app-header></app-header></section>
+<!-- Container -->
+<section class="form-box">
+  <div class="container">
+    <div class="form_box">
+      <h1>किसान लाइफ केयर</h1>
+      <h4 class="text-center hind subheading">पंजीकरण फॉर्म</h4>
+
+      <form class="hind mb-5" #data="ngForm" id="btnsubmit" (submit)="PostData(data) ">
+
+        <div class="col-md-12">
+          <div class="row">
+            <!-- Name -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name">नाम
+                </label>
+                <input type="text" class="form-control hind" id="name" name="name" [(ngModel)]="Data.name" #name="ngModel" required minlength="2" required onkeypress="return event.charCode === 0 || /[a-zA-Z]/.test(String.fromCharCode(event.charCode));">
+                <div *ngIf="name.invalid && (name.touched || name.dirty)"       class="alert alert-danger mt-2">
+                  <div *ngIf="name.errors.required" >
+                    Name is Required
+                  </div>
+                  <div *ngIf="name.errors.minlength">
+                    Name must be atleast 2 characters contains only aplhabets.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+
+              </div>
+            </div>
+
+            <!-- Father Name -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="fname">पिता का नाम
+                </label>
+                <input type="text" class="form-control hind" id="fname" name="fname" [(ngModel)]="Data.fatherName" #fname="ngModel" required required minlength="2" required onkeypress="return event.charCode === 0 || /[a-zA-Z]/.test(String.fromCharCode(event.charCode));">
+                <div *ngIf="fname.invalid && (fname.touched || fname.dirty)"       class="alert alert-danger mt-2">
+                  <div *ngIf="fname.errors.required" >
+                    Father Name is Required
+                  </div>
+                  <div *ngIf="fname.errors.minlength">
+                    Father Name must be atleast 2 characters contains only aplhabets.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+
+              </div>
+            </div>
+
+            <!-- Gender -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="gender">लिंग</label>
+                  <select class="form-control" name="gender" [(ngModel)]="Data.gender"
+                  #gender="ngModel" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                  <div *ngIf="gender.invalid &&(gender.touched||gender.dirty)"       class="alert alert-danger mt-2">
+                  </div>
+              </div>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="dob">जन्म तिथि</label>
+                <input type="date" class="form-control hind" id="dob" name="dob" [(ngModel)]="Data.dob" #dob="ngModel" required>
+                <div *ngIf="dob.invalid && (dob.touched || dob.dirty)"       class="alert alert-danger mt-2">
+                  <div *ngIf="dob.errors.required" >
+                    Date of Birth is Required
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="address">स्थाई पता
+                </label>
+                <input type="text" class="form-control hind" id="address" name="address" [(ngModel)]="Data.address"
+                  #address="ngModel" required>
+                  <div *ngIf="address.invalid && (address.touched || address.dirty)"       class="alert alert-danger mt-2">
+                    <div *ngIf="address.errors.required" >
+                      Address is Required
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <!-- Pin Code -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="pin">पिन कोड
+                </label>
+                <input type="number" class="form-control hind" id="pin" name="pin" [(ngModel)]="Data.pincode" #pin=ngModel value="" required pattern="\d{6}" onkeypress="return (event.charCode === 0 || /\d/).test(String.fromCharCode(event.charCode));"/>
+                <div *ngIf="pin.invalid && (pin.touched || pin.dirty)"
+                class="alert alert-danger mt-2" >
+                  <div *ngIf="pin.errors.required" >
+                    Pin Code Required
+                  </div>
+                  <div *ngIf="pin.errors.pattern">
+                    Pincode must contain 6 characters
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- District -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="district">जिला</label>
+                <input type="text" class="form-control hind" id="district" name="district" [(ngModel)]="Data.district"
+                  #district="ngModel" required minlength="3" required onkeypress="return event.charCode === 0 || /[a-zA-Z]/.test(String.fromCharCode(event.charCode));">
+                  <div *ngIf="district.invalid && (district.touched || district.dirty)"       class="alert alert-danger mt-2">
+                    <div *ngIf="district.errors.required" >
+                      District Required
+                    </div>
+                    <div *ngIf="district.errors.minlength">
+                      District must be atleast 3 characters contains only aplhabets.
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <!-- State -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="state">राज्य</label>
+                <input type="text" class="form-control hind" id="state" name="state" [(ngModel)]="Data.state"
+                  #state="ngModel" required minlength="3" required onkeypress="return event.charCode === 0 || /[a-zA-Z]/.test(String.fromCharCode(event.charCode));">
+                  <div *ngIf="state.invalid && (state.touched || state.dirty)"       class="alert alert-danger mt-2">
+                    <div *ngIf="state.errors.required" >
+                      State Required
+                    </div>
+                    <div *ngIf="state.errors.minlength">
+                      State must be atleast 3 characters contains only aplhabets.
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <!-- Mobile Number -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="mob">मोबाइल नंबर</label>
+                <input type="number" class="form-control hind" id="mobileNo" name="mobileNo" [(ngModel)]="Data.mobileNo"
+                  #mobileNo="ngModel" required minlength="10" maxlength="10" pattern="\d{10}"onkeypress="return (event.charCode === 0 || /\d/).test(String.fromCharCode(event.charCode));">
+                  <div *ngIf="mobileNo.invalid && (mobileNo.touched || mobileNo.dirty)" class="alert alert-danger mt-2" >
+                    <div *ngIf="mobileNo.errors.required" >
+                      Mobile Number Required
+                    </div>
+                    <div *ngIf="mobileNo.errors.pattern">
+                      Mobile Number Must Contain 10 Characters
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">ईमेल</label>
+                <input type="email" class="form-control hind" id="email" name="email" [(ngModel)]="Data.email" #email="ngModel" required pattern="[a-zA-Z0-9 ._%+-]+\@[a-z .-]+\.[a-z]{2,}$">
+                <div *ngIf="email.invalid && (email.touched || email.dirty)" class="alert alert-danger mt-2">
+                  <div *ngIf="email.errors.required" >
+                    Email is Required
+                  </div>
+                  <div *ngIf="email.errors.pattern">
+                    Email Invalid
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agricultural Land(Label) -->
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="agri">कृषि योग्य भूमि (एकड़)</label>
+              </div>
+            </div>
+
+            <!-- Agricultural Land -->
+            <div class="col-md-9">
+              <div class="form-group">
+                <input type="number" class="form-control hind" id="agri" name="agri" [(ngModel)]="Data.agricultureLand"
+                #agri="ngModel" required  onkeypress="return (event.charCode === 0 || /\d/).test(String.fromCharCode(event.charCode));">
+                <div *ngIf="agri.invalid && (agri.touched || agri.dirty)" class="alert alert-danger mt-2" >
+                  <div *ngIf="agri.errors.required" >
+                    Agricultural Land Required
+                  </div>
+                  <div *ngIf="agri.errors.pattern">
+                    Agricultural land not valid
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Occupation(Label) -->
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="occupation">व्यवसाय :- कृषि/ नौकरी/ व्यापार है तो किस किसम
+                  का</label>
+              </div>
+            </div>
+
+             <!-- Occupation-->
+            <div class="col-md-9">
+              <div class="form-group">
+                <input type="text" class="form-control hind" id="occupation" name="occupation" [(ngModel)]="Data.occupation" #occupation="ngModel" required minlength="2">
+                <div *ngIf="occupation.invalid && (occupation.touched || occupation.dirty)"class="alert alert-danger mt-2">
+                  <div *ngIf="occupation.errors.required" >
+                    Occupation Required
+                  </div>
+                  <div *ngIf="occupation.errors.minlength">
+                    Occupation must be atleast 2 characters.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Submission(Alert) -->
+        <div  class="d-flex justify-content-center align-items-center row text-center">
+          <div *ngIf="isLoad" class="spinner-border  text-primary mb-4">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div *ngIf="isError"  class="alert alert-danger col-md-7 w-50">Some error occured. Please try after some time!</div>
+          <div  *ngIf="isSuccess" class="alert alert-success col-md-7 w-50">Successfully Registered</div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mb-5 text-center mt-3">
+          <button type="submit" class="btn text-light butn" [disabled]="(data.invalid)">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<app-footer></app-footer>

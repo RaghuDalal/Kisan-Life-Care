@@ -1,0 +1,16 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00042d;
+  color: white;
+  text-align: center;
+  height:fit-content;
+  padding: 10px;
+  z-index: 9999;
+}
+.header h2 {
+  color: white;
+}
+
