@@ -1,0 +1,10 @@
+.image{
+  background: url(../../assets/img/404-image.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}

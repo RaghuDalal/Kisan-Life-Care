@@ -11,12 +11,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
  const routes: Routes = [
    { path: 'index', component:IndexComponent },
    { path: '', component: HomeComponent  },
+   { path: '**' , component: PagenotfoundComponent  },
 ]
 
 @NgModule({
@@ -26,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     FooterComponent,
     HeaderComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
